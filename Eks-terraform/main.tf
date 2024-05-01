@@ -84,7 +84,10 @@ resource "aws_eks_node_group" "example_node_group" {
   node_group_name = "Node-cloud"
   node_role_arn   = aws_iam_role.example1.arn
   subnet_ids      = data.aws_subnets.public.ids
-
+  launch_template = {
+    id      = aws_launch_template.example_node_group_lt.id
+    version = "$Latest"
+  }
   scaling_config {
     desired_size = 1
     max_size     = 4
