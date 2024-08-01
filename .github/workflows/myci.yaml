@@ -17,3 +17,4 @@ jobs:
 
         - name: BUILD DOCKER IMAGE
           run: echo "docker build -t my-app ."
+  
