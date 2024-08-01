@@ -1,0 +1,19 @@
+name: my-first_github-action_ci
+
+on: push
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: UPDATE ENV
+          run: echo "welcome to github action job"
+
+        - name: CLONE REPO
+          run: echo "git clone done"
+        
+        - name: SAST ON GOING IN
+          run: echo "sast done"
+
+        - name: BUILD DOCKER IMAGE
+          run: echo "docker build -t my-app ."
