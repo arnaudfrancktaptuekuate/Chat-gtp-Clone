@@ -1,6 +1,6 @@
 name: my-first_github-action_ci
 
-on: [push, commit]
+on: push
 
 jobs:
     first-job:
@@ -17,4 +17,3 @@ jobs:
 
         - name: BUILD DOCKER IMAGE
           run: echo "docker build -t my-app ."
-          
